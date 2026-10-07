@@ -1,6 +1,10 @@
 package metier;
 
 import dao.Idao;
+import org.springframework.stereotype.Component;
+
+@Component("metier")
+
 
 public class ImetierImpl implements Imetier {
     private final Idao dao;
@@ -11,6 +15,6 @@ public class ImetierImpl implements Imetier {
 
     @Override
     public double calcul() {
-        return dao.getData();
+        return dao.getData() * 2;
     }
 }
